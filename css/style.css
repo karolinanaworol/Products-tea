@@ -1,0 +1,125 @@
+body {
+    background-color: #98fb98;
+    position: relative;
+    margin: auto;
+    opacity: 0;
+}
+
+#gallery {
+    width: 1024px;
+    margin: 0 auto;
+    align-content: center;
+}
+
+#box-1 {
+    background-image: url(../product-1.jpg);
+}
+
+#box-2 {
+    background-image: url(../product-2.jpg);
+}
+
+#box-3 {
+    background-image: url(../product-3.jpg);
+}
+
+#box-4 {
+    background-image: url(../product-4.jpg);
+}
+
+.box {
+    display: inline-block;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    margin: 0;
+    opacity: 1;
+}
+
+.fas fa-shopping-cart {
+    position: absolute;
+    opacity: 1;
+    height: 50px;
+    width: 50px;
+}
+
+#box::before {
+    position: absolute;
+    content: " ";
+}
+
+#box::after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ff6f00;
+    opacity: 0.3;
+}
+
+#box:hover::after {
+    animation-name: cart;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#box:hover i {
+    animation-name: font-fade;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+@keyframes cart
+{
+    from
+    {
+       background-color: #ff6f00;
+    }
+to
+    {
+       background-color: 
+    }
+}
+
+
+@keyframes font-fade
+{
+    from
+    {
+       background-color: #ff6f00;
+    }
+to
+    {
+       background-color: 
+    }
+}
+
+#gallery {
+    width: 95%;
+}
+
+div {
+    width: 33%;
+}
+
+@media all and (min-width: 769px) and (max-width: 992px) {
+    div {
+        width: 49%;
+    }
+}
+
+@media all and (max-width: 768px) {
+   div {
+        width: 100%;
+    }
+}
+
+
+@media all and (max-width: 480px) {
+    div {
+        width: 100%;
+    }
+}
